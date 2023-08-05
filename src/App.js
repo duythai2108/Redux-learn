@@ -9,12 +9,7 @@ import Sidebar from "./components/Sidebar";
 import ButtonToggle from "./components/ButtonToggle";
 
 function App() {
-  return (
-    <div>
-      <Sidebar></Sidebar>
-      <ButtonToggle></ButtonToggle>
-    </div>
-  );
+  return <div></div>;
 }
 
 //CounterGrandpa -> CounterPArent -> Counter

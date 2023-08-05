@@ -15,7 +15,7 @@ export const counterSlice = createSlice({
     }),
     incrementbyvalue: (state, { payload }) => ({
       ...state,
-      count: state.count + payload.value,
+      count: state.count + payload,
     }),
   },
 });
