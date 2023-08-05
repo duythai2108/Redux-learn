@@ -5,11 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import Card from "./components/Card";
 import { toggleDarkMode } from "./redux-toolkit/globalSlice";
 import useDarkMode from "./hooks/useDarkMode";
+import Sidebar from "./components/Sidebar";
+import ButtonToggle from "./components/ButtonToggle";
 
 function App() {
   return (
     <div>
-      <Counter></Counter>
+      <Sidebar></Sidebar>
+      <ButtonToggle></ButtonToggle>
     </div>
   );
 }
