@@ -2,21 +2,22 @@
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getNews, otherAction, setQuery } from "../sagas/news/newsSlice";
+// import { getNews, otherAction, setQuery } from "../sagas/news/newsSlice";
 import { debounce } from "lodash";
+import { handleFetchNews, setLoading } from "../redux-thunk/newsSlice";
 const HackerNews = () => {
   const { hits, loading, errorMessage, query } = useSelector(
     (state) => state.news
   );
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getNews(query));
+    dispatch(handleFetchNews("css"));
   }, [dispatch, query]);
   const handleChangeQuery = debounce((e) => {
-    dispatch(setQuery(e.target.value));
+    // dispatch(setQuery(e.target.value));
   }, 500);
   const handleSetLoading = () => {
-    dispatch(otherAction(true));
+    dispatch(setLoading(true));
   };
   return (
     <div className="w-2/4 p-5 mx-auto mt-5 mb-5 bg-white rounded-lg shadow-md">
