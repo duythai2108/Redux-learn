@@ -7,9 +7,29 @@ import { toggleDarkMode } from "./redux-toolkit/globalSlice";
 import useDarkMode from "./hooks/useDarkMode";
 import Sidebar from "./components/Sidebar";
 import ButtonToggle from "./components/ButtonToggle";
+import HackerNews from "./components/HackerNews";
+import { getNews } from "./sagas/news/newsSlice";
 
 function App() {
-  return <div></div>;
+  // generator function
+
+  // useEffect(() => {
+  //   function* demoGenerator() {
+  //     yield 1;
+  //     yield 2;
+  //     yield 3;
+  //   }
+  //   const gen = demoGenerator();
+  //   console.log(gen.next());
+  // }, []);
+
+  // redux saga architecture
+
+  return (
+    <div>
+      <HackerNews></HackerNews>
+    </div>
+  );
 }
 
 //CounterGrandpa -> CounterPArent -> Counter
